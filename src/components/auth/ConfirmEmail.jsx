@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 export const CheckEmail = () => {
+  const navigate = useNavigate();
+
+  const handleUserTypeSelection = () => {
+      navigate("/confirme");
+  };
+
   return (
     <div style={styles.container}>
       <h2 style={styles.header}>¡Registro Exitoso!</h2>
@@ -10,41 +17,45 @@ export const CheckEmail = () => {
         <a style={styles.link} href="https://outlook.live.com" target="_blank" rel="noopener noreferrer">Outlook</a>
         <a style={styles.link} href="https://mail.google.com" target="_blank" rel="noopener noreferrer">Gmail</a>
         <a style={styles.link} href="mailto:">Correo Predeterminado</a>
+        <br></br>
+        <button className="btn-user consumer-btn" onClick={() => handleUserTypeSelection()}>
+          Continuar
+        </button>
       </div>
     </div>
   );
 };
 
 const styles = {
-    container: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100vh',
-      padding: '20px',
-      boxSizing: 'border-box',
-      fontFamily: 'Arial, sans-serif',
-    },
-    header: {
-      fontSize: '24px',
-      marginBottom: '20px',
-      color: '#fff',
-    },
-    message: {
-      fontSize: '16px',
-      marginBottom: '20px',
-      color: '#e6e6e6',
-      textAlign: 'center',
-    },
-    linksContainer: {
-      display: 'flex',
-      gap: '20px',
-    },
-    link: {
-      fontSize: '16px',
-      color: '#5979a4',
-      textDecoration: 'none',
-      transition: 'color 0.3s',
-    },
-  };
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    padding: '20px',
+    boxSizing: 'border-box',
+    fontFamily: 'Arial, sans-serif',
+  },
+  header: {
+    fontSize: '24px',
+    marginBottom: '20px',
+    color: '#fff',
+  },
+  message: {
+    fontSize: '16px',
+    marginBottom: '20px',
+    color: '#e6e6e6',
+    textAlign: 'center',
+  },
+  linksContainer: {
+    display: 'flex',
+    gap: '20px',
+  },
+  link: {
+    fontSize: '16px',
+    color: '#5979a4',
+    textDecoration: 'none',
+    transition: 'color 0.3s',
+  },
+};
