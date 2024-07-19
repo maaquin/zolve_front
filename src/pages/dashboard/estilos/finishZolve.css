@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.shopping-cart {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-cart h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-details {
+    padding: 20px;
+}
+
+.cart-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.cart-details h2 {
+    font-size: 20px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.item-img img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 20px;
+    max-width: calc(100% - 250px);
+    left: 0;
+}
+
+.name {
+    display: block;
+    font-size: 26px;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.item-price {
+    font-size: 26px;
+    color: #000000;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.remove-box {
+    flex-grow: 1;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.remove-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #d9534f;
+    cursor: pointer;
+    font-size: 14px;
+    width: 50px;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.total-price {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.checkout-btn,
+.cancel-btn {
+    margin-left: 20px;
+    padding: 17px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgb(68, 102, 160);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+.cancel-btn {
+    color: #d9534f;
+    background-color: #fff;
+}
+
+.checkout-btn:hover {
+    scale: 105%;
+    background-color: #153448;
+}
+
+.cancel-btn:hover {
+    scale: 105%;
+    background-color: #d01515;
+    color: #fff;
+}
+
+.checkout-btn:active {
+    background-color: #153448;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.cancel-btn:active {
+    background-color: #d01515;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.checkout-btn:disabled {
+    background-color: #ececec;
+    color: #d01515;
+    cursor: not-allowed;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+    max-height: 80vh; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Muestra una barra de desplazamiento vertical si el contenido es más grande */
+}
+
+/* Estilos para el overlay */
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.cash-payment-btn{
+    border: none;
+    background-color: #439e18;
+    font-size: 15px;
+    color: #fff;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+}
+
+.cash-payment-btn:hover{
+    cursor: pointer;
+    background-color: #3c9314;
+}
+
+.pdf-download-button {
+    margin-top: 10px;
+    width: 86.5%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pdf-download-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.pdf-download-button:active {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+.pdf-download-button:disabled {
+    background-color: #c0c0c0;
+    border-color: #c0c0c0;
+    cursor: not-allowed;
+}
