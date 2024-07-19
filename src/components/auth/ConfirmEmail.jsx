@@ -5,7 +5,7 @@ export const CheckEmail = () => {
   const navigate = useNavigate();
 
   const handleUserTypeSelection = () => {
-      navigate("/confirme");
+      navigate("/auth/confirme");
   };
 
   return (
